@@ -1,0 +1,36 @@
+{
+    "name": "Nombre de la extension, es lo que se muestra al hacer click en extensiones",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Esto aparecera como descripcion de la extension",
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "js": ["popup.js"]
+      }
+    ],
+    "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://api-events-yj5s.onrender.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Event Vault Extension"
+    },
+    "short_name": "NombreCorto2",
+    "author": "Matias Fandiño"
+  }
+  
